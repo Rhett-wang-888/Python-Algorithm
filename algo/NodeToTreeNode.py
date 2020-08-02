@@ -3,7 +3,7 @@
 # @ author Rhett.wang
 # @ date 2020 / 7 / 26 21: 04
 #
-from test.ListNode import TreeNode
+from algo.ListNode import TreeNode
 
 
 class NodeToTreeNode:
