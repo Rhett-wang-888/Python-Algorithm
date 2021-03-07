@@ -1,5 +1,5 @@
 # @title: HuiSu
-# @description: TODO 字符串回文分割 使用回溯方法
+# @description: TODO 字符串回文分割 使用回溯方法 这个方法就是使用字符关系
 # @author  Rhett
 # @date 2021/3/7 14:28
 from typing import List
