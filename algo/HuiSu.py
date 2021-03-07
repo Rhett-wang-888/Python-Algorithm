@@ -19,7 +19,7 @@ class Solution:
             if i==n:
                 ret.append(ans[:])
                 return
-            for j in range(j,n):
+            for j in range(i,n):
                 if f[i][j]:
                     ans.append(s[i:j+1])
                     dfs(j+1)
