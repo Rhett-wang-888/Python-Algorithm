@@ -9,6 +9,7 @@ class BSTIterator:
     def __init__(self,root:TreeNode):
         self.curr=root
 
+
     def next(self)->int:
         while self.curr.left:
             left=self.curr.left
