@@ -4,6 +4,8 @@
 # @date 2021/8/30 11:27
 from typing import List
 
+from algo import ListNode
+
 
 class TwoSum:
     def twoSum1(self,nums:List[int],target:int)->List[int]:
@@ -21,3 +23,18 @@ class TwoSum:
                 return [hash[target-num],i]
             hash[nums[i]]=i
         return []
+
+    def twoSum3(self,l1:ListNode,l2:ListNode)->ListNode:
+        #首先创建一个虚拟节点，并创建一个current指针，指向这个节点
+        current=dummy=ListNode()
+        carry,value=0,0
+        while carry or l1 or l2:
+            value=carry
+
+            if l1:l1,value=l1.next,l1.val+value
+            if l2:l2,value=l2.next,l2.val+value
+
+            carry,value=divmod(value,10)
+            current.next=ListNode(value)
+            current=current.next
+        return dummy.next
