@@ -6,6 +6,19 @@ from typing import List
 
 
 class ShellSort:
+    def shellSort(self,arr)->List[int]:
+        gap=len(arr)//2
+        while gap>0:
+            for i in range(gap,len(arr)):
+                j=i
+                current=arr[i]
+                while j-gap>=0 and current<arr[j-gap]:
+                    arr[j]=arr[j-gap]
+                    j-=gap
+                arr[j]=current
+            gap//=2
+        return arr
+
     def sortArry1(self,nums:List[int])->List[int]:
         n=len(nums)
         h=n//2
@@ -41,7 +54,7 @@ class ShellSort:
 
 if __name__=='__main__':
     a=[20,10,30,50,40,60]
-    b=ShellSort().sortArry(a)
+    b=ShellSort().shellSort(a)
     print(b)
 
 
